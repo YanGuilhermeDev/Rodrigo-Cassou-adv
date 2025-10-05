@@ -1,0 +1,1759 @@
+/* ===============================
+   EFEITOS DE TRANSIÇÃO DE SEÇÕES
+   =============================== */
+.section-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
+    will-change: opacity, transform;
+}
+.section-fade.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ===============================
+   FOOTER MODERNO
+   =============================== */
+.footer-site {
+    width: 100%;
+    background: linear-gradient(120deg, #1e293b 60%, #334155 100%);
+    padding: 1.2rem 0 0.5rem 0;
+    color: #e0e6ed;
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(120deg, #1e293b 60%, #334155 100%);
+}
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding: 0 1.5rem;
+}
+.footer-contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    min-width: 180px;
+}
+.footer-icone {
+    color: #e4c473;
+    font-size: 2rem;
+    background: rgba(255,255,255,0.10);
+    border-radius: 50%;
+    padding: 0.6rem;
+    transition: color 0.3s, background 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.2rem;
+}
+.footer-icone:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #e4c473 0%, #d4af37 100%);
+    transform: translateY(-3px) scale(1.08);
+}
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    font-size: 1rem;
+    color: #e0e6ed;
+    text-align: left;
+    min-width: 260px;
+}
+.footer-info strong {
+    color: #FFD700;
+    font-size: 1.08em;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    display: block;
+}
+.footer-endereco {
+    margin-top: 0.7rem;
+    color: #b6b9c6;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    max-width: 340px;
+}
+.footer-label {
+    color: #e4c473;
+    font-size: 0.98em;
+    font-weight: 600;
+    margin-right: 0.5em;
+}
+.footer-bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.2rem;
+        padding: 0 0.5rem;
+    }
+    .footer-info, .footer-endereco {
+        align-items: center;
+        text-align: center;
+        min-width: unset;
+        max-width: 100%;
+    }
+    .footer-contatos {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-width: unset;
+    }
+}
+@media (max-width: 700px) {
+    .titulo-processo {
+        font-size: 1.02rem;
+        line-height: 1.22;
+        padding: 0 0.5rem;
+        margin-bottom: 0.5rem;
+        word-break: break-word;
+    }
+    .texto-processo {
+        font-size: 0.89rem;
+        line-height: 1.4;
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+        max-width: 98vw;
+        word-break: break-word;
+    }
+    .footer-container {
+        padding: 0 0.5rem;
+    }
+    .footer-info {
+        font-size: 0.95rem;
+    }
+    .footer-icone {
+        font-size: 1.4rem;
+        padding: 0.4rem;
+    }
+}
+.cta-icones {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.3rem;
+}
+.cta-icones i {
+    font-size: 2.2rem;
+    color: #e4c473;
+    background: rgba(255,255,255,0.13);
+    border-radius: 50%;
+    padding: 0.7rem;
+    box-shadow: 0 2px 12px rgba(228,196,115,0.10);
+    transition: color 0.3s, background 0.3s, transform 0.3s;
+}
+.cta-icones i:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #e4c473 0%, #d4af37 100%);
+    transform: translateY(-4px) scale(1.12);
+}
+.container-cta {
+    backdrop-filter: blur(4px);
+    border: 1.5px solid rgba(255,255,255,0.18);
+}
+.destaque-dourado {
+    color: #e4c473;
+    font-weight: 700;
+}
+/* ===============================
+   SEÇÃO 6: CHAMADA PARA AÇÃO (CTA)
+   =============================== */
+.secao-cta {
+    width: 100%;
+    background: linear-gradient(120deg, #1e293b 60%, #334155 100%);
+    padding: 3.5rem 0 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-cta {
+    position: relative;
+    transition: top 0.3s, box-shadow 0.45s cubic-bezier(.4,0,.2,1), background 0.45s cubic-bezier(.4,0,.2,1);
+.container-cta:hover {
+    top: -8px;
+}
+    max-width: 540px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.10);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(15,23,42,0.13);
+    padding: 2.5rem 2rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+}
+.titulo-cta {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+    letter-spacing: -0.5px;
+}
+.texto-cta {
+    color: #e0e6ed;
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+}
+.btn-cta {
+    display: inline-block;
+    background: linear-gradient(90deg, #e4c473 0%, #d4af37 100%);
+    color: #1e293b;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.95rem 2.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(228,196,115,0.13);
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    margin-bottom: 1.1rem;
+}
+.btn-cta:hover {
+    background: linear-gradient(90deg, #d4af37 0%, #e4c473 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+}
+.texto-secundario-cta {
+    color: #FFD700;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    opacity: 0.92;
+}
+@media (max-width: 700px) {
+    .container-cta {
+        padding: 1.5rem 0.7rem 1.2rem 0.7rem;
+    }
+    .titulo-cta {
+        font-size: 1.25rem;
+    }
+    .texto-cta, .texto-secundario-cta {
+        font-size: 0.98rem;
+    }
+    .btn-cta {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+    }
+}
+/* Ícones dos cards do processo */
+.icone-card {
+    display: block;
+    width: 2.8em;
+    height: 2.8em;
+    margin: 0 auto 0.3rem auto;
+    font-size: 2.8em;
+    color: var(--brand-gold);
+    transition: color 0.5s, transform 0.5s;
+    position: relative;
+}
+/* Card de Justiça e Reparação mais largo */
+.card-processo-destaque {
+    max-width: 400px !important;
+    min-width: 320px;
+}
+/* Destaque azul para processo */
+.azul-processo {
+    color: #D4AF37;
+    font-weight: 700;
+}
+/* ===============================
+   SEÇÃO 3: PROCESSO - GLASSMORPHISM CARDS
+   =============================== */
+.secao-processo {
+    width: 100%;
+    background-image:
+        linear-gradient(120deg, rgba(15,23,42,0.85) 60%, rgba(30,41,59,0.9) 100%),
+        url('./assets/natureza-morta-com-balanca-da-justica.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 48vh;
+    padding: 4.5rem 0 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-processo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.titulo-processo {
+    color: #fff;
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.texto-processo {
+    color: #e0e6ed;
+    font-size: 1.18rem;
+    line-height: 1.7;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+}
+
+.cards-processo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.2rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-processo {
+    position: relative;
+    transition: top 0.3s, box-shadow 0.45s cubic-bezier(.4,0,.2,1), background 0.45s cubic-bezier(.4,0,.2,1), color 0.45s cubic-bezier(.4,0,.2,1), border 0.45s cubic-bezier(.4,0,.2,1);
+    background: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0.10));
+    border: 1.2px solid #e7c873;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(228, 196, 115, 0.13);
+    padding: 2.2rem 1.7rem 2rem 1.7rem;
+    max-width: 320px;
+    min-width: 260px;
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: top 0.3s, box-shadow 0.45s cubic-bezier(.4,0,.2,1), background 0.45s cubic-bezier(.4,0,.2,1), color 0.45s cubic-bezier(.4,0,.2,1), border 0.45s cubic-bezier(.4,0,.2,1);
+    will-change: top, box-shadow, background, border-color;
+    position: relative;
+    animation: fadeInUp 1.2s cubic-bezier(.4,0,.2,1) both;
+}
+.card-processo:hover {
+    top: -8px;
+    top: -8px;
+    box-shadow: 0 18px 52px rgba(15,23,42,0.45), 0 0 0 1px rgba(231,200,115,0.65);
+    border-color: var(--brand-gold);
+    background: rgba(255,255,255,0.16);
+}
+.card-processo:hover .icone-card {
+    color: #FFD700;
+    transform: translateY(-5px) scale(1.035);
+    
+    /* Box-shadow removido do hover do ícone */
+}
+.card-processo:hover h3 {
+    color:  var(--brand-gold);
+}
+.card-processo:hover p {
+    color: var(--text-secondary);
+}
+/* removido: ícones phosphor */
+
+/* removido: ícones phosphor nos cards */
+.card-processo h3 {
+    color: #fff;
+    font-size: 1.18rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    margin-top: 0.2rem;
+    position: relative;
+}
+.card-processo h3::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 42px;
+    margin: 0.45rem auto 0 auto;
+    background: linear-gradient(90deg, transparent, var(--brand-gold), transparent);
+    opacity: 0.7;
+    transition: width 0.45s cubic-bezier(.4,0,.2,1), opacity 0.45s cubic-bezier(.4,0,.2,1);
+}
+.card-processo:hover h3::after { width: 64px; opacity: 1; }
+.card-processo p {
+    color: #e0e6ed;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    transition: color 0.3s, transform 0.3s;
+}
+
+@media (max-width: 900px) {
+    .cards-processo {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+    }
+    .card-processo {
+        max-width: 98vw;
+    }
+}
+/* removido: bloco de ícone do card empatia */
+/* Texto final centralizado no card empatia */
+.empatia-final {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.3rem;
+    font-size: 1.08em;
+}
+/* Destaques lado a lado na empatia */
+.empatia-lado-a-lado {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+.empatia-lado-a-lado .destaque-empatia {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.08em;
+}
+/* Card Empatia Único com Ícones */
+.card-empatia.unico {
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(15,23,42,0.10);
+    padding: 2.5rem 2.2rem 2.2rem 2.2rem;
+    width: 100%;
+    max-width: 700px;
+    min-height: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    animation: fadeInUp 1.2s cubic-bezier(.4,0,.2,1) both;
+    transition: transform 0.7s cubic-bezier(.4,0,.2,1), box-shadow 0.7s cubic-bezier(.4,0,.2,1), background 0.7s cubic-bezier(.4,0,.2,1);
+    padding: 3.2rem 2.2rem 3rem 2.2rem;
+}
+.card-empatia.unico:hover {
+    transform: translateY(-8px) scale(1.025);
+    box-shadow: 0 12px 40px rgba(15,23,42,0.18);
+    background: rgba(255,255,255,0.13);
+}
+.card-empatia.unico .titulo-empatia {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    transition: color 0.7s;
+}
+.card-empatia.unico .texto-empatia {
+    color: #e0e6ed;
+    font-size: 1.18rem;
+    line-height: 1.7;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    white-space: pre-line;
+    transition: color 0.7s;
+}
+.card-empatia.unico:hover .titulo-empatia {
+    color: #fbbf24;
+}
+.card-empatia.unico:hover .texto-empatia {
+    color: #fff;
+}
+.card-empatia.unico:hover .destaque-empatia {
+    color: #0ea5e9;
+}
+.card-empatia.unico .destaque-empatia {
+    color: #D4AF37;
+    font-weight: 600;
+    transition: color 0.7s;
+}
+/* removido: ícones phosphor no card empatia */
+@media (max-width: 700px) {
+    .card-empatia.unico {
+        max-width: 98vw;
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+    .card-empatia.unico .titulo-empatia {
+        font-size: 1.25rem;
+    }
+    .card-empatia.unico .texto-empatia {
+        font-size: 1rem;
+    }
+}
+/* Cards Empatia */
+.cards-empatia {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-empatia {
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(15,23,42,0.10);
+    padding: 2.2rem 2rem 2rem 2rem;
+    width: 100%;
+    max-width: 700px;
+    transition: transform 0.7s cubic-bezier(.4,0,.2,1), box-shadow 0.7s cubic-bezier(.4,0,.2,1), background 0.7s cubic-bezier(.4,0,.2,1);
+    animation: fadeInUp 1.2s cubic-bezier(.4,0,.2,1) both;
+}
+
+.card-empatia:hover {
+    transform: translateY(-8px) scale(1.025);
+    box-shadow: 0 12px 40px rgba(15,23,42,0.18);
+    background: rgba(255,255,255,0.13);
+}
+
+@media (max-width: 700px) {
+    .cards-empatia {
+        gap: 1.2rem;
+        max-width: 98vw;
+    }
+    .card-empatia {
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+}
+/* ===============================
+   SEÇÃO 2: EMPATIA
+   =============================== */
+.secao-empatia {
+    width: 100%;
+    min-height: 48vh;
+    padding: 4.5rem 0 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(1200px 500px at 10% 0%, rgba(212,175,55,0.08), transparent 60%),
+        radial-gradient(900px 400px at 95% 15%, rgba(14,165,233,0.08), transparent 60%),
+        linear-gradient(120deg, #1e293b 60%, #334155 100%);
+}
+
+
+.secao-empatia:hover {
+    background: linear-gradient(120deg, #1e293b 60%, #334155 100%);
+}
+
+.conteudo-empatia {
+    max-width: 760px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.08);
+    border-radius: 22px;
+    box-shadow: 0 10px 40px rgba(15,23,42,0.18);
+    padding: 2.6rem 2.2rem 2.4rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.5px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(6px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.container-empatia {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.07);
+    border-radius: 22px;
+    box-shadow: 0 6px 32px rgba(15,23,42,0.10);
+    padding: 2.5rem 2rem 2.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.5px solid rgba(255,255,255,0.10);
+}
+
+.titulo-empatia {
+    color: #fff;
+    font-size: 2.1rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.6px;
+    position: relative;
+}
+
+.secao-empatia:hover .titulo-empatia {
+    color: #fbbf24;
+}
+
+.texto-empatia {
+    color: #e0e6ed;
+    font-size: 1.18rem;
+    line-height: 1.7;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 0.2rem;
+}
+
+.secao-empatia:hover .texto-empatia {
+    color: #fff;
+}
+
+.destaque-empatia {
+    color: #0ea5e9;
+    font-weight: 700;
+    background: rgba(14,165,233,0.14);
+    border: 1px solid rgba(14,165,233,0.35);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+}
+
+.secao-empatia:hover .destaque-empatia {
+    color: var(--brand-accent);
+}
+
+@media (max-width: 600px) {
+    .container-empatia {
+        padding: 1.5rem 0.7rem 1.2rem 0.7rem;
+    }
+    .titulo-empatia {
+        font-size: 1.25rem;
+    }
+    .texto-empatia {
+        font-size: 1rem;
+    }
+}
+
+/* ===============================
+   SEÇÃO 4: BENEFÍCIOS
+   =============================== */
+.secao-beneficios {
+    width: 100%;
+    min-height: 48vh;
+    padding: 4.5rem 0 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(1200px 600px at 20% 0%, rgba(212,175,55,0.08), transparent 60%),
+                radial-gradient(1000px 500px at 85% 20%, rgba(14,165,233,0.08), transparent 60%),
+                linear-gradient(120deg, #0f172a 60%, #111827 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.container-beneficios {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-beneficios {
+    color: #fff;
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+}
+
+.texto-beneficios {
+    color: var(--text-secondary);
+    font-size: 1.18rem;
+    line-height: 1.7;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    max-width: 780px;
+}
+
+.lista-beneficios {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.beneficio-card {
+    background: rgba(255,255,255,0.08);
+    border: 1.2px solid rgba(255,255,255,0.15);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    padding: 1.5rem 1.2rem 1.4rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    animation: fadeInUp 0.9s cubic-bezier(.4,0,.2,1) both;
+    transition: transform 0.45s cubic-bezier(.4,0,.2,1),
+                box-shadow 0.45s cubic-bezier(.4,0,.2,1),
+                border-color 0.45s cubic-bezier(.4,0,.2,1),
+                background 0.45s cubic-bezier(.4,0,.2,1);
+}
+
+.beneficio-card h3 {
+    color: var(--brand-gold);
+    font-size: 1.15rem;
+    font-weight: 600;
+    transition: color 0.45s cubic-bezier(.4,0,.2,1);
+}
+
+.beneficio-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: color 0.45s cubic-bezier(.4,0,.2,1);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 22px 68px rgba(15,23,42,0.50), 0 0 0 1px var(--brand-gold), 0 0 24px rgba(212,175,55,0.25);
+    border-color: var(--brand-gold);
+    background: rgba(255,255,255,0.12);
+}
+
+.beneficio-card:hover h3 { color: var(--brand-gold); }
+.beneficio-card:hover p { color: #ffffff; }
+
+/* Stagger: animação em cascata */
+.beneficio-card:nth-child(1) { animation-delay: 0.0s; }
+.beneficio-card:nth-child(2) { animation-delay: 0.08s; }
+.beneficio-card:nth-child(3) { animation-delay: 0.16s; }
+.beneficio-card:nth-child(4) { animation-delay: 0.24s; }
+
+@media (max-width: 1100px) {
+    .lista-beneficios { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+    .lista-beneficios { grid-template-columns: 1fr; }
+    .titulo-beneficios { font-size: 1.5rem; }
+    .texto-beneficios { font-size: 1rem; }
+}
+
+/* Section reveal: transição suave de entrada */
+.secao-beneficios { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.secao-beneficios.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ===============================
+   SEÇÃO 5: GARANTIA 2 COLUNAS
+   =============================== */
+.secao-garantia-2col {
+    width: 100%;
+    padding: 5rem 0 5rem 0;
+    background: linear-gradient(120deg, #0f172a 60%, #111827 100%);
+}
+.garantia-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+.garantia-texto {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 2.2rem 2rem;
+}
+.garantia-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+}
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.07);
+    color: #e5e7eb;
+    font-size: 0.85rem;
+    letter-spacing: 0.2px;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.badge:hover { background: rgba(255,255,255,0.12); border-color: var(--brand-gold); color: #fff; }
+.garantia-divisor {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(231,200,115,0.55), transparent);
+    margin: 0.8rem 0 1rem 0;
+}
+.titulo-garantia {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    margin-bottom: 1rem;
+}
+.lista-garantia {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+.lista-garantia h3 { color: var(--brand-gold); font-size: 1.08rem; }
+.lista-garantia p { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.75; }
+
+.garantia-imagem {
+    border-radius: 22px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+    min-height: 360px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('assets/rodrigocassou.webp');
+    transition: transform 0.6s cubic-bezier(.4,0,.2,1),
+                box-shadow 0.6s cubic-bezier(.4,0,.2,1),
+                filter 0.6s cubic-bezier(.4,0,.2,1),
+                border-color 0.6s cubic-bezier(.4,0,.2,1);
+    position: relative;
+    overflow: hidden;
+}
+.garantia-legenda {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0,0,0,0.45);
+    color: #e5e7eb;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.55rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(4px);
+}
+
+.garantia-imagem::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(600px 300px at 80% 20%, rgba(15,23,42,0.20), transparent 60%),
+                linear-gradient(180deg, rgba(15,23,42,0.15), rgba(15,23,42,0.15));
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+.garantia-imagem:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 18px 54px rgba(15,23,42,0.5), 0 0 0 1px var(--brand-gold), 0 0 24px rgba(212,175,55,0.22);
+    filter: saturate(1.06) contrast(1.06);
+    border-color: var(--brand-gold);
+}
+
+.garantia-imagem:hover::after {
+    opacity: 0.75;
+}
+
+.garantia-texto {
+    transition: transform 0.45s cubic-bezier(.4,0,.2,1),
+                box-shadow 0.45s cubic-bezier(.4,0,.2,1),
+                border-color 0.45s cubic-bezier(.4,0,.2,1),
+                background 0.45s cubic-bezier(.4,0,.2,1);
+}
+.garantia-texto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(15,23,42,0.35);
+    border-color: var(--brand-gold);
+    background: rgba(255,255,255,0.10);
+}
+
+@media (max-width: 980px) {
+    .garantia-grid { grid-template-columns: 1fr; }
+    .garantia-imagem { min-height: 260px; }
+}
+/* Logo centralizada no topo do card */
+.logo-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    margin-top: 0.2rem;
+}
+/* ===================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e6ed;
+    --brand-gold: #D4AF37;
+    --brand-gold-strong: #e7c873;
+    --brand-accent: #0ea5e9;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+}
+
+/* ===================================
+   SEÇÃO HERO PRINCIPAL
+   =================================== */
+.secao-heroi {
+    /* Define a imagem de fundo do hero */
+    background-image: url('assets/mulher-estressada-em-casa-lutando-contra-o-esgotamento-e-exaustao-no-trabalho (1).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 48vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Overlay gradiente para melhorar legibilidade do texto */
+.secao-heroi::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Filtro azul sólido translúcido cobrindo toda a imagem */
+    background: rgba(15, 23, 42, 0.85);
+    z-index: 1;
+}
+
+/* ===================================
+   CABEÇALHO COM LOGO
+   =================================== */
+.cabecalho {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 0 1rem 0;
+}
+
+.container-cabecalho {
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5rem;
+}
+ 
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   CONTEÚDO PRINCIPAL DO HERO
+   =================================== */
+.conteudo-heroi {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 0 2rem 0;
+}
+
+.container-conteudo {
+    /*  Container centralizado no mobile */
+    max-width: 600px;
+    margin: 0 0 0 2.5rem;
+    padding: 0.5rem 2.5rem 2rem 2.5rem;
+    background: rgba(255,255,255,0.04);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    display: block;
+    width: 100%;
+}
+
+/* ===================================
+   TIPOGRAFIA
+   =================================== */
+
+/* Título Principal (H1) */
+.titulo-principal {
+    font-size: 2.5rem;
+ 
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+/* Destaque em dourado para palavras-chave */
+.destaque-dourado {
+    color: var(--brand-gold);
+}
+
+/* Subtítulo (H2) */
+.subtitulo {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    text-align: left;
+    color: var(--text-secondary);
+}
+
+/* Texto Descritivo */
+.texto-descritivo {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-align: left;
+    color: var(--text-secondary);
+}
+
+/* ===================================
+   CAIXA DE INFORMAÇÃO (GLASSMORPHISM)
+   =================================== */
+.caixa-info {
+    /* Efeito de vidro fosco */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    background: rgba(255,255,255,0.13);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.texto-caixa {
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===================================
+   BOTÃO DE CALL-TO-ACTION
+   =================================== */
+.botao-cta {
+    /* Estilo do botão verde */
+    display: inline-block;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-cta:hover {
+    /* Efeitos ao passar o mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.6);
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+.botao-cta:active {
+    transform: translateY(0);
+}
+
+/* Acessibilidade: foco visível para teclado */
+.botao-cta:focus-visible {
+    outline: 3px solid var(--brand-accent);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(14,165,233,0.25), 0 6px 20px rgba(34, 197, 94, 0.6);
+}
+
+/* ===================================
+   RESPONSIVIDADE - DESKTOP
+   =================================== */
+@media (min-width: 768px) {
+    /*  Alinhamento à esquerda no desktop */
+    .titulo-principal,
+    .subtitulo,
+    .texto-descritivo {
+        text-align: left;
+    }
+
+    .texto-caixa {
+        text-align: left;
+    }
+
+    /*  Container limitado à metade esquerda da tela */
+    .container-conteudo {
+        max-width: 600px;
+        margin: 0 0 0 5rem;
+    }
+
+    /* Aumenta tamanhos de fonte no desktop */
+    .titulo-principal {
+        font-size: 3rem;
+    }
+
+    .subtitulo {
+        font-size: 1.35rem;
+    }
+
+    .texto-descritivo {
+        font-size: 1.125rem;
+    }
+
+    .logo {
+        height: 64px;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    /*  Tamanhos maiores para telas grandes */
+    .titulo-principal {
+        font-size: 3.5rem;
+    }
+
+    .container-conteudo {
+        max-width: 650px;
+        margin-left: 6rem;
+    }
+    .logo {
+        height: 80px;
+    }
+}
+
+@media (min-width: 1440px) {
+    /*  Ajustes para telas muito grandes */
+    .titulo-principal {
+        font-size: 4rem;
+    }
+
+    .container-conteudo {
+        max-width: 700px;
+        margin-left: 8rem;
+    }
+}
+
+/* Ajuste de escala apenas no container em telas muito grandes */
+@media (min-width: 1440px) {
+    .container-conteudo { transform: scale(1.03); }
+}
+
+/* Ajustes mobile para cartões do processo */
+@media (max-width: 700px) {
+    .card-processo h3 { color: var(--brand-accent) !important; }
+    .card-processo p { color: var(--brand-gold) !important; }
+}
+/* Ícone acima do título do card empatia */
+.icone-empatia-topo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+.icone-empatia-topo .ph {
+    font-size: 2.2em;
+    color: #D4AF37;
+    opacity: 0.92;
+}
+/* Texto final centralizado no card empatia */
+.empatia-final {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.3rem;
+    font-size: 1.08em;
+}
+/* Destaques lado a lado na empatia */
+.empatia-lado-a-lado {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+.empatia-lado-a-lado .destaque-empatia {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.08em;
+}
+/* Card Empatia Único com Ícones */
+.card-empatia.unico {
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(15,23,42,0.10);
+    padding: 2.5rem 2.2rem 2.2rem 2.2rem;
+    width: 100%;
+    max-width: 700px;
+    min-height: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    animation: fadeInUp 1.2s cubic-bezier(.4,0,.2,1) both;
+    transition: transform 0.7s cubic-bezier(.4,0,.2,1), box-shadow 0.7s cubic-bezier(.4,0,.2,1), background 0.7s cubic-bezier(.4,0,.2,1);
+    padding: 3.2rem 2.2rem 3rem 2.2rem;
+}
+.card-empatia.unico:hover {
+    transform: translateY(-8px) scale(1.025);
+    box-shadow: 0 12px 40px rgba(15,23,42,0.18);
+    background: rgba(255,255,255,0.13);
+}
+.card-empatia.unico .titulo-empatia {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    transition: color 0.7s;
+}
+.card-empatia.unico .texto-empatia {
+    color: #e0e6ed;
+    font-size: 1.18rem;
+    line-height: 1.7;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    white-space: pre-line;
+    transition: color 0.7s;
+}
+.card-empatia.unico:hover .titulo-empatia {
+    color: #fbbf24;
+}
+.card-empatia.unico:hover .texto-empatia {
+    color: #fff;
+}
+.card-empatia.unico:hover .destaque-empatia {
+    color: #0ea5e9;
+}
+.card-empatia.unico .destaque-empatia {
+    color: #D4AF37;
+    font-weight: 600;
+    transition: color 0.7s;
+}
+.card-empatia.unico .ph {
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin: 0 0.2em;
+    opacity: 0.85;
+}
+@media (max-width: 700px) {
+    .card-empatia.unico {
+        max-width: 98vw;
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+    .card-empatia.unico .titulo-empatia {
+        font-size: 1.25rem;
+    }
+    .card-empatia.unico .texto-empatia {
+        font-size: 1rem;
+    }
+}
+/* Cards Empatia */
+.cards-empatia {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-empatia {
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(15,23,42,0.10);
+    padding: 2.2rem 2rem 2rem 2rem;
+    width: 100%;
+    max-width: 700px;
+    transition: transform 0.7s cubic-bezier(.4,0,.2,1), box-shadow 0.7s cubic-bezier(.4,0,.2,1), background 0.7s cubic-bezier(.4,0,.2,1);
+    animation: fadeInUp 1.2s cubic-bezier(.4,0,.2,1) both;
+}
+
+.card-empatia:hover {
+    transform: translateY(-8px) scale(1.025);
+    box-shadow: 0 12px 40px rgba(15,23,42,0.18);
+    background: rgba(255,255,255,0.13);
+}
+
+@media (max-width: 700px) {
+    .cards-empatia {
+        gap: 1.2rem;
+        max-width: 98vw;
+    }
+    .card-empatia {
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+}
+/* ===============================
+   SEÇÃO 2: EMPATIA
+   =============================== */
+.secao-empatia {
+    width: 100%;
+    min-height: 48vh;
+    padding: 4.5rem 0 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #1e293b 60%, #334155 100%);
+}
+
+
+.secao-empatia:hover {
+    background: linear-gradient(120deg, #1e293b 60%, #334155 100%);
+}
+
+.conteudo-empatia {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.07);
+    border-radius: 22px;
+    box-shadow: 0 6px 32px rgba(15,23,42,0.10);
+    padding: 2.5rem 2rem 2.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.5px solid rgba(255,255,255,0.18);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.container-empatia {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.07);
+    border-radius: 22px;
+    box-shadow: 0 6px 32px rgba(15,23,42,0.10);
+    padding: 2.5rem 2rem 2.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.5px solid rgba(255,255,255,0.10);
+}
+
+.titulo-empatia {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.secao-empatia:hover .titulo-empatia {
+    color: #fbbf24;
+}
+
+.texto-empatia {
+    color: #e0e6ed;
+    font-size: 1.18rem;
+    line-height: 1.7;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 0.2rem;
+}
+
+.secao-empatia:hover .texto-empatia {
+    color: #fff;
+}
+
+.destaque-empatia {
+    color: #D4AF37;
+    font-weight: 600;
+}
+
+.secao-empatia:hover .destaque-empatia {
+    color: var(--brand-accent);
+}
+
+@media (max-width: 600px) {
+    .container-empatia {
+        padding: 1.5rem 0.7rem 1.2rem 0.7rem;
+    }
+    .titulo-empatia {
+        font-size: 1.25rem;
+    }
+    .texto-empatia {
+        font-size: 1rem;
+    }
+}
+/* Logo centralizada no topo do card */
+.logo-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    margin-top: 0.2rem;
+}
+/* ===================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e6ed;
+    --brand-gold: #D4AF37;
+    --brand-gold-strong: #e7c873;
+    --brand-accent: #0ea5e9;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+}
+
+/* ===================================
+   SEÇÃO HERO PRINCIPAL
+   =================================== */
+.secao-heroi {
+    /* Define a imagem de fundo do hero */
+    background-image: url('assets/mulher-estressada-em-casa-lutando-contra-o-esgotamento-e-exaustao-no-trabalho (1).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 48vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Overlay gradiente para melhorar legibilidade do texto */
+.secao-heroi::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Filtro azul sólido translúcido cobrindo toda a imagem */
+    background: rgba(15, 23, 42, 0.85);
+    z-index: 1;
+}
+
+/* ===================================
+   CABEÇALHO COM LOGO
+   =================================== */
+.cabecalho {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 0 1rem 0;
+}
+
+.container-cabecalho {
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5rem;
+}
+ 
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   CONTEÚDO PRINCIPAL DO HERO
+   =================================== */
+.conteudo-heroi {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 0 2rem 0;
+}
+
+.container-conteudo {
+    /*  Container centralizado no mobile */
+    max-width: 600px;
+    margin: 0 0 0 2.5rem;
+    padding: 0.5rem 2.5rem 2rem 2.5rem;
+    background: rgba(255,255,255,0.04);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    display: block;
+    width: 100%;
+}
+
+/* ===================================
+   TIPOGRAFIA
+   =================================== */
+
+/* Título Principal (H1) */
+.titulo-principal {
+    font-size: 2.5rem;
+ 
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+/* Destaque em dourado para palavras-chave */
+.destaque-dourado {
+    color: var(--brand-gold);
+}
+
+/* Subtítulo (H2) */
+.subtitulo {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    text-align: left;
+    color: var(--text-secondary);
+}
+
+/* Texto Descritivo */
+.texto-descritivo {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-align: left;
+    color: var(--text-secondary);
+}
+
+/* ===================================
+   CAIXA DE INFORMAÇÃO (GLASSMORPHISM)
+   =================================== */
+.caixa-info {
+    /* Efeito de vidro fosco */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    background: rgba(255,255,255,0.13);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.texto-caixa {
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===================================
+   BOTÃO DE CALL-TO-ACTION
+   =================================== */
+.botao-cta {
+    /* Estilo do botão verde */
+    display: inline-block;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-cta:hover {
+    /* Efeitos ao passar o mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.6);
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+.botao-cta:active {
+    transform: translateY(0);
+}
+
+/* ===================================
+   RESPONSIVIDADE - DESKTOP
+   =================================== */
+@media (min-width: 768px) {
+    /*  Alinhamento à esquerda no desktop */
+    .titulo-principal,
+    .subtitulo,
+    .texto-descritivo {
+        text-align: left;
+    }
+
+    .texto-caixa {
+        text-align: left;
+    }
+
+    /*  Container limitado à metade esquerda da tela */
+    .container-conteudo {
+        max-width: 600px;
+        margin: 0 0 0 5rem;
+    }
+
+    /* Aumenta tamanhos de fonte no desktop */
+    .titulo-principal {
+        font-size: 3rem;
+    }
+
+    .subtitulo {
+        font-size: 1.35rem;
+    }
+
+    .texto-descritivo {
+        font-size: 1.125rem;
+    }
+
+    .logo {
+        height: 64px;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    /*  Tamanhos maiores para telas grandes */
+    .titulo-principal {
+        font-size: 3.5rem;
+    }
+
+    .container-conteudo {
+        max-width: 650px;
+        margin-left: 6rem;
+    }
+    .logo {
+        height: 80px;
+    }
+}
+
+@media (min-width: 1440px) {
+    /*  Ajustes para telas muito grandes */
+    .titulo-principal {
+        font-size: 4rem;
+    }
+
+    .container-conteudo {
+        max-width: 700px;
+        margin-left: 8rem;
+    }
+}
+
+/* Ajuste de escala apenas no container em telas muito grandes */
+@media (min-width: 1440px) {
+    .container-conteudo { transform: scale(1.03); }
+}
+
+/* Ajustes mobile para cartões do processo */
+@media (max-width: 700px) {
+    .card-processo h3 { color: var(--brand-accent) !important; }
+    .card-processo p { color: var(--brand-gold) !important; }
+}
