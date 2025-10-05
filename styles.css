@@ -1,4 +1,34 @@
 @media (max-width: 768px) {
+        .garantia-grid {
+            grid-template-columns: 1fr !important;
+            gap: 0 !important;
+            padding: 0 !important;
+            margin: 0 auto !important;
+            justify-items: center;
+        }
+        .garantia-imagem {
+            min-height: 180px !important;
+            max-height: 220px !important;
+            aspect-ratio: 1/1.1 !important;
+            background-size: contain !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            margin: 0 auto !important;
+            width: 90vw !important;
+            max-width: 340px !important;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            box-sizing: border-box !important;
+            padding: 0 !important;
+        }
+        .garantia-texto {
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 90vw !important;
+            max-width: 340px !important;
+            box-sizing: border-box !important;
+        }
     .garantia-grid {
         grid-template-columns: 1fr !important;
         gap: 1.2rem !important;
