@@ -1,3 +1,17 @@
+@media (max-width: 767px) {
+    .secao-heroi {
+        background-image: url('assets/vista-lateral-mulher-frustrada-na-mesa.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+}
+@media (max-width: 767px) {
+    .secao-heroi {
+        background-image: url('assets/vista-lateral-mulher-frustrada-na-mesa.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+}
 /* Botão flutuante WhatsApp */
 .whatsapp-float {
     position: fixed;
